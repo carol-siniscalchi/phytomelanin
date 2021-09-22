@@ -76,7 +76,7 @@ aic.er.prif <- AIC(er.prif)
 ard.prif <- ace(prif, tree, type="d", model="ARD")
 co <- c("white", "black")
 plot(tree, cex = .6)
-nodelabels(pie=er.prif$lik.anc, piecol=co, cex=0.4)
+nodelabels(pie=ard.prif$lik.anc, piecol=co, cex=0.4)
 aic.ard.prif <- AIC(ard.prif)
 #Primary Phloem:(ARD)-Log-likelihood: -14.8851
 

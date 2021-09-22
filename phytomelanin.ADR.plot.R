@@ -79,3 +79,17 @@ colsy <-setNames(c("#a6dba0","#7b3294"), c("a","b"))
 pdf(file="all.tipstates.pdf", width = 6, height = 7)
 dotTree(tree2, X, labels=TRUE, colors=colsy,data.type="discrete",fsize=0.6)
 dev.off()
+
+## supplemental figure
+ard.prif <- ace(prif, tree, type="d", model="ARD")
+ard.sxyl <- ace(sxyl, tree, type="d", model="ARD")
+
+pdf(file="supp.pdf", width = 12, height = 10)
+par(mfrow = c(1,2))
+plot(tree, cex = 1)
+nodelabels(pie=ard.prif$lik.anc, piecol=co, cex=0.8)
+tiplabels(pie=to.matrix(prif[tree$tip.label], levels(prif)),piecol=co,cex=0.3)
+plot(tree, cex = 1)
+nodelabels(pie=ard.sxyl$lik.anc, piecol=co, cex=0.8)
+tiplabels(pie=to.matrix(sxyl[tree$tip.label], levels(sxyl)),piecol=co,cex=0.3)
+dev.off()
