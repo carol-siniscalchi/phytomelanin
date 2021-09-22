@@ -4,6 +4,7 @@ library(ape)
 
 #get tree
 tree <- read.tree("tree.tre")
+co <- c("#a6dba0","#7b3294")
 
 #get traits
 X<-read.csv("traits.bi.csv", row.names=1)
@@ -18,7 +19,6 @@ pith<-as.factor(setNames(X[,7],rownames(X)))
 #Pericycle
 #ER
 er.peri <- ace(peri, tree, type="d", model="ER")
-co <- c("red", "blue")
 plot(tree, cex = .6)
 nodelabels(pie=er.peri$lik.anc, piecol=co, cex=0.4)
 aic.er.peri <- AIC(er.peri)
@@ -26,7 +26,6 @@ aic.er.peri <- AIC(er.peri)
 
 #ARD
 ard.peri <- ace(peri, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.peri$lik.anc, piecol=co, cex=0.4)
 aic.ard.peri <- AIC(ard.peri)
@@ -34,7 +33,6 @@ aic.ard.peri <- AIC(ard.peri)
 
 #SYM
 sym.peri <- ace(peri, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.peri$lik.anc, piecol=co, cex=0.4)
 aic.sym.peri <- AIC(sym.peri)
@@ -43,7 +41,6 @@ aic.sym.peri <- AIC(sym.peri)
 ##Cortex
 #ER
 er.cort <- ace(cort, tree, type="d", model="ER")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=er.cort$lik.anc, piecol=co, cex=0.4)
 aic.er.cort <- AIC(er.cort)
@@ -51,14 +48,12 @@ aic.er.cort <- AIC(er.cort)
 
 #ARD
 ard.cort <- ace(cort, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.cort$lik.anc, piecol=co, cex=0.4)
 aic.ard.cort <- AIC(ard.cort)
 
 #SYM
 sym.cort <- ace(cort, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.cort$lik.anc, piecol=co, cex=0.4)
 aic.sym.cort <- AIC(sym.cort)
@@ -66,7 +61,6 @@ aic.sym.cort <- AIC(sym.cort)
 ###Primary Phloem
 #ER
 er.prif <- ace(prif, tree, type="d", model="ER")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=er.prif$lik.anc, piecol=co, cex=0.4)
 aic.er.prif <- AIC(er.prif)
@@ -74,7 +68,6 @@ aic.er.prif <- AIC(er.prif)
 
 #ARD
 ard.prif <- ace(prif, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.prif$lik.anc, piecol=co, cex=0.4)
 aic.ard.prif <- AIC(ard.prif)
@@ -82,7 +75,6 @@ aic.ard.prif <- AIC(ard.prif)
 
 #SYM
 sym.prif <- ace(prif, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.prif$lik.anc, piecol=co, cex=0.4)
 aic.sym.prif <- AIC(sym.prif)
@@ -91,7 +83,6 @@ aic.sym.prif <- AIC(sym.prif)
 #Seconday Phloem
 #ER
 er.secf <- ace(secf, tree, type="d", model="ER")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=er.secf$lik.anc, piecol=co, cex=0.4)
 aic.er.secf <- AIC(er.secf)
@@ -99,7 +90,6 @@ aic.er.secf <- AIC(er.secf)
 
 #ARD
 ard.secf <- ace(secf, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.secf$lik.anc, piecol=co, cex=0.4)
 aic.ard.secf <- AIC(ard.secf)
@@ -107,7 +97,6 @@ aic.ard.secf <- AIC(ard.secf)
 
 #SYM
 sym.secf <- ace(secf, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.secf$lik.anc, piecol=co, cex=0.4)
 aic.sym.secf <- AIC(sym.secf)
@@ -116,7 +105,6 @@ aic.sym.secf <- AIC(sym.secf)
 #Primary Xylem
 #ER
 er.pxyl <- ace(pxyl, tree, type="d", model="ER")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=er.pxyl$lik.anc, piecol=co, cex=0.4)
 aic.er.pxyl <- AIC(er.pxyl)
@@ -124,7 +112,6 @@ aic.er.pxyl <- AIC(er.pxyl)
 
 #ARD
 ard.pxyl <- ace(pxyl, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.pxyl$lik.anc, piecol=co, cex=0.4)
 aic.ard.pxyl <- AIC(ard.pxyl)
@@ -132,7 +119,6 @@ aic.ard.pxyl <- AIC(ard.pxyl)
 
 #SYM
 sym.pxyl <- ace(pxyl, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.pxyl$lik.anc, piecol=co, cex=0.4)
 aic.sym.pxyl <- AIC(sym.pxyl)
@@ -141,7 +127,6 @@ aic.sym.pxyl <- AIC(sym.pxyl)
 #Secondary Xylem
 #ER
 er.sxyl <- ace(sxyl, tree, type="d", model="ER")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=er.sxyl$lik.anc, piecol=co, cex=0.4)
 aic.er.sxyl <- AIC(er.sxyl)
@@ -149,7 +134,6 @@ aic.er.sxyl <- AIC(er.sxyl)
 
 #ARD
 ard.sxyl <- ace(sxyl, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.sxyl$lik.anc, piecol=co, cex=0.4)
 aic.ard.sxyl <- AIC(ard.sxyl)
@@ -157,7 +141,6 @@ aic.ard.sxyl <- AIC(ard.sxyl)
 
 #SYM
 sym.sxyl <- ace(sxyl, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.sxyl$lik.anc, piecol=co, cex=0.4)
 aic.sym.sxyl <- AIC(sym.sxyl)
@@ -166,7 +149,6 @@ aic.sym.sxyl <- AIC(sym.sxyl)
 #Pith
 #ER
 er.pith <- ace(pith, tree, type="d", model="ER")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=er.pith$lik.anc, piecol=co, cex=0.4)
 aic.er.pith <- AIC(er.pith)
@@ -174,7 +156,6 @@ aic.er.pith <- AIC(er.pith)
 
 #ADR
 ard.pith <- ace(pith, tree, type="d", model="ARD")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=ard.pith$lik.anc, piecol=co, cex=0.4)
 aic.ard.pith <- AIC(ard.pith)
@@ -182,7 +163,6 @@ aic.ard.pith <- AIC(ard.pith)
 
 #SYM
 sym.pith <- ace(pith, tree, type="d", model="SYM")
-co <- c("white", "black")
 plot(tree, cex = .6)
 nodelabels(pie=sym.pith$lik.anc, piecol=co, cex=0.4)
 aic.sym.pith <- AIC(sym.pith)
