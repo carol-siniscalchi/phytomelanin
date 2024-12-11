@@ -38,6 +38,18 @@ nodelabels(pie=sym.peri$lik.anc, piecol=co, cex=0.4)
 aic.sym.peri <- AIC(sym.peri)
 ##Pericycle:(SYM)-Log-likelihood: -29.87272
 
+
+peri_er<-fitMk(tree,peri, model="ER",pi="fitzjohn")
+peri_sym<-fitMk(tree,peri, model="SYM",pi="fitzjohn")
+peri_ard<-fitMk(tree,peri, model="ARD",pi="fitzjohn")
+
+peri_aov<-anova(peri_er,peri_sym,peri_ard)
+peri_ancr<-ancr(peri_aov)
+peri_ancr
+
+plot(peri_ard, show.zeros = TRUE)
+as.Qmatrix(peri_ard)
+
 ##Cortex
 #ER
 er.cort <- ace(cort, tree, type="d", model="ER")
