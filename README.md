@@ -1,5 +1,5 @@
 # phytomelanin
-Data and scripts from **"Evolution of the occurrence of phytomelanin in aerial stems of American Vernonieae subtribes (Asteraceae)"**, submitted and under review in Flora. 
+Data and scripts from [**"Evolution of the occurrence of phytomelanin in aerial stems of American Vernonieae subtribes (Asteraceae)"**](https://doi.org/10.1016/j.flora.2025.152685), published in the journal Flora. 
 
 Authors: Josiane Wolff, Benoit Francis Patrice Loeuille, Carolina M. Siniscalchi, Fernanda Maria Cordeiro de Oliveira, Ana Claudia Rodrigues, Makeli Garibotti Lusa
 
